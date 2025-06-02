@@ -373,7 +373,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 120px;          /* each badge container’s max width */
+        width: 110px;          /* each badge container’s max width */
         text-align: center;
     }
     
