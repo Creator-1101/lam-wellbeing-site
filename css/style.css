@@ -646,3 +646,158 @@
         color: inherit !important;      /* pick up the <a> color */
         }
     }
+
+    /* =========================================================================
+   ARTICLE‐CARD (modern, centered, card‐style)
+   ========================================================================= */
+
+    /* 2.1. Page Background */
+    .page-background {
+        background-color: #f4f4f4;
+        padding-bottom: 4rem; /* space beneath the card before footer */
+    }
+    
+    /* 2.2. Article Card Container */
+    .article-card {
+        background-color: white;
+        max-width: 800px;
+        margin: 3rem auto;        /* centers horizontally & pushes down from top */
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+    }
+    
+    /* Spacer to keep the title below the fixed header */
+    .article-card-spacer {
+        height: 100px; /* equal to header (80px) + 20px margin */
+    }
+    
+    /* 2.3. Article Title (adjusted spacing) */
+    .article-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5rem;
+        color: #c45c4b;
+        text-align: center;
+        margin: 0 auto 1.5rem; /* bottom margin before banner */
+        padding: 0 1rem;
+    }
+    
+    /* 2.4. Banner Image (inside card) */
+    .card-banner {
+        width: 100%;
+        max-height: 350px;
+        overflow: hidden;
+    }
+    
+    .card-banner-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+    
+    /* 2.5. Content Wrapper (inside card) */
+    .card-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    /* 2.6. Article Meta Bar */
+    .article-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        align-items: center;
+        margin-bottom: 2rem;
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #555;
+        font-size: 0.9rem;
+    }
+    
+    .article-meta .meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    .article-meta i {
+        color: #c45c4b;
+        font-size: 1rem;
+    }
+    
+    /* 2.7. Article Content Styles */
+    .article-content {
+        font-family: 'Barlow Condensed', sans-serif;
+        color: #333;
+        line-height: 1.6;
+    }
+    
+    .article-content h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.75rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #c45c4b;
+    }
+    
+    .article-content h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: #c45c4b;
+    }
+    
+    .article-content p {
+        margin-bottom: 1rem;
+    }
+    
+    .article-content ul,
+    .article-content ol {
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .article-content li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .article-content blockquote {
+        margin: 1.5rem 2rem;
+        padding: 1rem 1.5rem;
+        background-color: #f8f0eb;
+        border-left: 4px solid #c45c4b;
+        font-style: italic;
+        color: #555;
+    }
+    
+    /* 2.8. Responsive Adjustments */
+    @media (max-width: 768px) {
+        .article-card {
+        margin: 1.5rem auto;
+        }
+        .article-card-spacer {
+        height: 90px; /* slightly less on smaller screens */
+        }
+        .article-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        }
+        .card-banner {
+        max-height: 250px;
+        }
+        .article-meta {
+        flex-direction: column;
+        gap: 1rem;
+        }
+        .article-content h2 {
+        font-size: 1.5rem;
+        }
+        .article-content h3 {
+        font-size: 1.1rem;
+        }
+        .card-content {
+        padding: 1.5rem 1rem;
+        }
+    }
+    
