@@ -619,3 +619,30 @@
      }
    }
    
+   /* =========================================================================
+   FORCE SOCIAL ICONS VISIBLE ON MOBILE
+   ========================================================================= */
+
+    @media (max-width: 768px) {
+        /* 1) Ensure the container is still flex and centered */
+        .footer-section .social-icons {
+        display: flex !important;
+        justify-content: center;
+        gap: 1rem;               /* space between icons */
+        margin-top: 0.5rem;      /* small top spacing */
+        }
+    
+        /* 2) Ensure each <a> remains inline-block and visible */
+        .footer-section .social-icons a {
+        display: inline-block !important;
+        font-size: 1.2rem !important;   /* same size as desktop */
+        color: #333 !important;         /* dark grey so it shows on a light background */
+        opacity: 1 !important;
+        }
+    
+        /* 3) Explicitly override any “hiding” rule on the <i> itself */
+        .footer-section .social-icons a .fab {
+        display: inline-block !important;
+        color: inherit !important;      /* pick up the <a> color */
+        }
+    }
