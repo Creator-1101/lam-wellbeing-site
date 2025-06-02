@@ -593,62 +593,71 @@
      transform: none !important;
    }
    
-   /* =======================================================================
-      MEDIA QUERIES (MOBILE FIRST)
-      ======================================================================= */
-   
-   @media (max-width: 768px) {
-     /* Header/nav – already handled above */
-   
-     /* Hero stacked */
-     .hero-content {
-       flex-direction: column-reverse;
-       text-align: center;
-       padding-bottom: 2rem;
-     }
-   
-     .hero-image {
-       margin-bottom: 2rem;
-     }
-   
-     /* About stacked */
-     .about-content {
-       flex-direction: column;
-       text-align: center;
-     }
-   
-     /* Offerings – single column */
-     .offerings-grid {
-       grid-template-columns: 1fr;
-     }
-   
-     /* Footer – center each section */
-     .footer-inner {
-       flex-direction: column;
-       text-align: center;
-     }
-   }
-   
-     /* ============================
-     MOBILE BUTTON ADJUSTMENTS
-     ============================ */
+   /* =========================================================================
+   MEDIA QUERIES (MOBILE FIRST)
+   ========================================================================= */
 
-    /* Make primary/secondary buttons full‐width, stacked, and easier to tap */
+    @media (max-width: 768px) {
+    /* Header/nav – already handled above */
+  
+    /* Hero stacked */
+    .hero-content {
+      flex-direction: column-reverse;
+      text-align: center;
+      padding-bottom: 2rem;
+    }
+    .hero-image {
+      margin-bottom: 2rem;
+    }
+  
+    /* About stacked */
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    /* Offerings – single column */
+    .offerings-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Footer – center each section */
+    .footer-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    /* ============================
+       MOBILE BUTTON ADJUSTMENTS
+       ============================ */
+  
+    /* Make primary & secondary buttons full-width and stacked */
     .btn-primary,
     .btn-secondary {
-        display: block;
-        width: 50%;
-        max-width: none;
-        padding: 0.75rem 0;     /* taller tappable area */
-        font-size: 1rem;       /* slightly larger text */
-        text-align: center;
-        margin: 0.5rem 0;      /* vertical breathing room */
+      display: block;
+      width: 100%;
+      padding: 0.75rem 0;    /* taller tappable area */
+      font-size: 1rem;      /* a bit larger text */
+      text-align: center;
+      margin: 0.5rem 0;     /* vertical space between buttons */
     }
-
-    /* If you wrapped buttons in .hero-cta, force it to stack vertically */
+  
+    /* If you wrapped hero buttons in .hero-cta, force them to stack */
     .hero-cta {
-        display: block;        /* children (.btn-*) will stack */
+      display: block;       /* .btn-primary and .btn-secondary will stack */
     }
+  
+    /* Center the “See All Offerings” button under the offerings grid */
+    .teaser-cta {
+      text-align: center;
+      margin-top: 1.5rem;   /* breathing room above */
+    }
+    .teaser-cta .btn-primary {
+      display: inline-block;/* so it doesn’t stretch 100% in that spot */
+      width: auto;          /* revert to intrinsic width */
+      padding: 0.75rem 1.5rem;
+    }
+  }
 
 
    /* =========================================================================
