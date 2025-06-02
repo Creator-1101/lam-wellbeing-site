@@ -314,8 +314,8 @@
    ========================================================================= */
 
     .hero-cta {
-        display: centre;
-        gap: 10rem;
+        display: flex;
+        gap: 1rem;
         margin-top: 1.5rem;
     }
 
@@ -629,6 +629,28 @@
      }
    }
    
+     /* ============================
+     MOBILE BUTTON ADJUSTMENTS
+     ============================ */
+
+    /* Make primary/secondary buttons full‐width, stacked, and easier to tap */
+    .btn-primary,
+    .btn-secondary {
+        display: block;
+        width: 50%;
+        max-width: none;
+        padding: 0.75rem 0;     /* taller tappable area */
+        font-size: 1rem;       /* slightly larger text */
+        text-align: center;
+        margin: 0.5rem 0;      /* vertical breathing room */
+    }
+
+    /* If you wrapped buttons in .hero-cta, force it to stack vertically */
+    .hero-cta {
+        display: block;        /* children (.btn-*) will stack */
+    }
+
+
    /* =========================================================================
    FORCE SOCIAL ICONS VISIBLE ON MOBILE
    ========================================================================= */
