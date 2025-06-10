@@ -941,6 +941,40 @@
     }
 
     /* =========================================================================
+   OFFERINGS PAGE – MOBILE CARD STACKING
+   ========================================================================= */
+
+    @media (max-width: 768px) {
+      /* tighten up the spacing on mobile */
+      .offering-row {
+        gap: 1.5rem;
+        padding: 1rem 0;
+      }
+    
+      /* turn each card into a vertical stack */
+      .offering-card-horizontal {
+        flex-direction: column;
+      }
+    
+      /* make the image span full width, auto-height */
+      .card-image {
+        flex: none;
+        width: 100%;
+        height: auto;
+      }
+      .card-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    
+      /* slightly reduce padding inside the text block */
+      .card-details {
+        padding: 1rem;
+      }
+    }
+    
+    /* =========================================================================
    OFFERINGS PAGE – HORIZONTAL CARD BUTTONS FIXED
    ========================================================================= */
 
@@ -1026,6 +1060,7 @@
     .page-title {
       background-color: #fafafa;
       padding: 6rem 0 2rem;
+      margin-top: 4rem;
       text-align: center;
     }
 
