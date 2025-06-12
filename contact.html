@@ -119,7 +119,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="offerings.html">Offerings</a></li>
           <li><a href="events.html">Events</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
         </ul>
       </div>
       <div class="footer-section">
@@ -135,17 +135,8 @@
     </div>
   </footer>
 
-  <!-- JS for form feedback -->
+  <!-- Site Scripts -->
   <script src="js/script.js"></script>
-  <script>
-    const form = document.getElementById('contactForm');
-    const feedback = document.getElementById('formFeedback');
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      form.classList.add('sending');
-      setTimeout(() => feedback.classList.add('visible'), 500);
-    });
-  </script>
 
 </body>
 </html>
