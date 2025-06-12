@@ -1323,6 +1323,8 @@
       height: 50vh;        /* half screen height */
       min-height: 220px;   /* don’t go below this */
       overflow: hidden;
+      padding-top: 80px;
+      box-sizing: border-box;
     }
     .contact-banner img {
       width: 100%;
@@ -1332,6 +1334,10 @@
     /* Nudge banner text up a little */
     .contact-banner .banner-text {
       top: 40%;
+      position: absolute;
+      top: calc(50% + 40px);  /* shift down half of the padding */
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     /* Stack the two columns (info + form) vertically */
