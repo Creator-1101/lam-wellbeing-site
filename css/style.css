@@ -1323,6 +1323,8 @@
       height: 50vh;        /* half screen height */
       min-height: 220px;   /* don’t go below this */
       overflow: hidden;
+      padding: 4rem;
+      box-sizing: border-box;
     }
     .contact-banner img {
       width: 100%;
@@ -1331,6 +1333,12 @@
     }
     /* Nudge banner text up a little */
     .contact-banner .banner-text {
+      position: relative;
+      top: auto;
+      transform: none;
+      margin-top: -2rem;
+      padding: 0 1 rem;
+      text-align: center;
       top: 40%;
     }
 
