@@ -1296,7 +1296,7 @@
 
     .contact-banner {
       position: relative;
-      height: 400px;
+      height: 300px;
       overflow: hidden;
     }
     .contact-banner .banner-text {
@@ -1315,4 +1315,39 @@
     .contact-banner .banner-text p {
       font-size: 1.25rem;
     }
-    
+
+    /* Mobile tweaks for Contact page */
+@media (max-width: 768px) {
+    /* Make banner take half the viewport height (with a floor), and ensure the image covers it */
+    .contact-banner {
+      height: 50vh;        /* half screen height */
+      min-height: 220px;   /* don’t go below this */
+      overflow: hidden;
+    }
+    .contact-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Nudge banner text up a little */
+    .contact-banner .banner-text {
+      top: 40%;
+    }
+
+    /* Stack the two columns (info + form) vertically */
+    .contact-split {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .contact-left,
+    .contact-right {
+      flex: none;
+      width: 100%;
+      padding: 0 1rem;
+    }
+
+    /* Tighten up overall padding so things aren’t too spaced out */
+    .contact-main {
+      padding: 2rem 0;
+    }
+  }
