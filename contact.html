@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – LAM Wellbeing</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="css/assets/lam-logo.png" alt="LAM Wellbeing Logo" class="logo-img" />
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="offerings.html" class="nav-link">Offerings</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section class="contact-banner">
+    <img src="images/contact-banner.png" alt="Wellbeing banner">
+    <div class="banner-text">
+      <h1>Contact Us</h1>
+      <p>Have a question or want to book a session? Reach out below.</p>
+    </div>
+  </section>
+
+  <!-- Main Content: Split Left & Right -->
+  <section class="contact-main container">
+    <div class="contact-split">
+      <!-- Left: Contact Info -->
+      <div class="contact-left">
+        <h2>Connect With Us</h2>
+        <ul class="contact-info-list">
+          <li class="contact-info-item">
+            <i class="fas fa-envelope contact-info-icon"></i>
+            <a href="mailto:liliandmayawellbeing@gmail.com" class="contact-info-link">liliandmayawellbeing@gmail.com</a>
+          </li>
+          <li class="contact-info-item">
+            <i class="fas fa-phone contact-info-icon"></i>
+            <a href="tel:+447972275563" class="contact-info-link">+44 07972 275 563</a>
+          </li>
+          <li class="contact-info-item">
+            <i class="fab fa-whatsapp contact-info-icon"></i>
+            <a href="https://wa.me/447972275563" class="contact-info-link">WhatsApp Chat</a>
+          </li>
+          <li class="contact-info-item">
+            <i class="fab fa-facebook-f contact-info-icon"></i>
+            <a href="https://www.facebook.com/lamwellbeing" target="_blank" class="contact-info-link">@LamWellbeing</a>
+          </li>
+          <li class="contact-info-item">
+            <i class="fab fa-instagram contact-info-icon"></i>
+            <a href="https://www.instagram.com/lamwellbeing" target="_blank" class="contact-info-link">@LamWellbeing</a>
+          </li>
+          <li class="contact-info-item">
+            <i class="fab fa-tiktok contact-info-icon"></i>
+            <a href="#" class="contact-info-link">@LamWellbeing</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="contact-right">
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+          <div id="formFeedback" class="form-feedback">Thank you! Your message has been sent.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>
+          <strong>Phone:</strong> <a href="tel:+447972275563">+44 07972 275 563</a><br />
+          <strong>Email:</strong> <a href="mailto:liliandmayawellbeing@gmail.com">liliandmayawellbeing@gmail.com</a>
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="offerings.html">Offerings</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="https://www.facebook.com/lamwellbeing" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.instagram.com/lamwellbeing" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LAM Wellbeing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS for form feedback -->
+  <script src="js/script.js"></script>
+  <script>
+    const form = document.getElementById('contactForm');
+    const feedback = document.getElementById('formFeedback');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      form.classList.add('sending');
+      setTimeout(() => feedback.classList.add('visible'), 500);
+    });
+  </script>
+
+</body>
+</html>
