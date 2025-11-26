@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events – LAM Wellbeing</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="css/assets/lam-logo.png" alt="LAM Wellbeing Logo" class="logo-img" />
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span class="hamburger"></span></button>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="offerings.html" class="nav-link">Offerings</a></li>
+          <li><a href="events.html" class="nav-link active">Events</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Title -->
+  <section class="page-title">
+    <div class="container">
+      <h1>Upcoming Events</h1>
+      <p>Join us for retreats, workshops, and meditation circles designed to nourish mind, body, and spirit.</p>
+    </div>
+  </section>
+
+  <!-- Events List -->
+  <section class="events-section container">
+    <div class="events-grid">
+      <!-- Event Card 1 -->
+      <div class="event-card">
+        <div class="event-image">
+          <img src="css/assets/event-placeholder.jpg" alt="Event 1" />
+        </div>
+        <div class="event-content">
+          <span class="event-category">Meditation</span>
+          <h3 class="event-title">Spring Equinox Retreat</h3>
+          $1
+          <div class="event-attrs">
+            <span class="attr attr-format"><i class="fa-solid fa-users"></i> <span class="value" data-role="format"></span></span>
+            <span class="attr attr-duration"><i class="fa-regular fa-hourglass-half"></i> <span class="value" data-role="duration"></span></span>
+            <span class="attr attr-tags"><i class="fa-solid fa-tag"></i> <span class="tag-list" data-role="tags"></span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Card 2 -->
+      <div class="event-card">
+        <div class="event-image">
+          <img src="css/assets/event-placeholder.jpg" alt="Event 2" />
+        </div>
+        <div class="event-content">
+          <span class="event-category">Meditation</span>
+          <h3 class="event-title">Monthly Sound Bath</h3>
+          $1
+          <div class="event-attrs">
+            <span class="attr attr-format"><i class="fa-solid fa-users"></i> <span class="value" data-role="format"></span></span>
+            <span class="attr attr-duration"><i class="fa-regular fa-hourglass-half"></i> <span class="value" data-role="duration"></span></span>
+            <span class="attr attr-tags"><i class="fa-solid fa-tag"></i> <span class="tag-list" data-role="tags"></span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Card 3 -->
+      <div class="event-card">
+        <div class="event-image">
+          <img src="css/assets/event-placeholder.jpg" alt="Event 3" />
+        </div>
+        <div class="event-content">
+          <span class="event-category">Meditation</span>
+          <h3 class="event-title">Corporate Wellness Workshop</h3>
+          $1
+          <div class="event-attrs">
+            <span class="attr attr-format"><i class="fa-solid fa-users"></i> <span class="value" data-role="format"></span></span>
+            <span class="attr attr-duration"><i class="fa-regular fa-hourglass-half"></i> <span class="value" data-role="duration"></span></span>
+            <span class="attr attr-tags"><i class="fa-solid fa-tag"></i> <span class="tag-list" data-role="tags"></span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>
+          <strong>Phone:</strong> <a href="tel:+447972275563">+44 07972 275 563</a><br />
+          <strong>Email:</strong> <a href="mailto:liliandmayawellbeing@gmail.com">liliandmayawellbeing@gmail.com</a>
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="offerings.html">Offerings</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <ul class="social-icons">
+          <li><a href="https://www.facebook.com/lamwellbeing" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.instagram.com/lamwellbeing" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LAM Wellbeing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+  <script>
+    (function(){
+      const formats = ["Group session","1:1 session","Circle","Workshop","Retreat"];
+      const durations = ["60 minutes","90 minutes","2 hours","Half day","Full day","2 days","3 days"];
+      const tagsPool = ["Meditation","Healing","Sound Bath","Breathwork","Reiki","Wellbeing","Energy","Mindfulness"]; 
+
+      function pick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+      function pickTags(){
+        const shuffled = [...tagsPool].sort(()=>0.5-Math.random());
+        return shuffled.slice(0, Math.random() < 0.5 ? 1 : 2); // 1–2 tags
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.event-card').forEach(card => {
+          const formatEl = card.querySelector('[data-role="format"]');
+          const durationEl = card.querySelector('[data-role="duration"]');
+          const tagsEl = card.querySelector('[data-role="tags"]');
+          if (formatEl) formatEl.textContent = pick(formats);
+          if (durationEl) durationEl.textContent = pick(durations);
+          if (tagsEl) {
+            const chosen = pickTags();
+            tagsEl.innerHTML = chosen.map(t => `<span class="tag">${t}</span>`).join(' ');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
