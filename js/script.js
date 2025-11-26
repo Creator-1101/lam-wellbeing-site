@@ -9,7 +9,25 @@ document.addEventListener('DOMContentLoaded', () => {
       navList.classList.toggle('nav-list-visible');
     });
   }
-  // Add any tab-switching logic here
+
+  // Offerings page tab switching
+  const tabButtons  = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+  if (tabButtons.length && tabContents.length) {
+    tabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-tab');
+        if (!targetId) return;
+
+        tabButtons.forEach((b) => b.classList.remove('active'));
+        tabContents.forEach((c) => c.classList.remove('active'));
+
+        btn.classList.add('active');
+        const targetContent = document.getElementById(targetId);
+        if (targetContent) targetContent.classList.add('active');
+      });
+    });
+  }
 });
 
 // Contact form submission
