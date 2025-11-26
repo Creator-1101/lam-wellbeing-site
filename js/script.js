@@ -28,6 +28,31 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Lightbox for retreat gallery images
+  const galleryImgs = document.querySelectorAll('.retreat-gallery-grid .media-thumb img');
+  if (galleryImgs.length) {
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox-overlay';
+    overlay.innerHTML = '<div class="lightbox-inner"><img alt="" /></div>';
+    document.body.appendChild(overlay);
+
+    const overlayImg = overlay.querySelector('img');
+    const closeOverlay = () => overlay.classList.remove('open');
+
+    overlay.addEventListener('click', closeOverlay);
+    galleryImgs.forEach((img) => {
+      img.addEventListener('click', () => {
+        overlayImg.src = img.src;
+        overlayImg.alt = img.alt || 'Retreat image';
+        overlay.classList.add('open');
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('open')) closeOverlay();
+    });
+  }
 });
 
 // Contact form submission

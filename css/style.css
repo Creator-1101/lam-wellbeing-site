@@ -1781,3 +1781,36 @@
   .pill { width: 100%; justify-content: flex-start; }
   .retreat-cta { flex-direction: column; }
 }
+
+/* Lightbox overlay for gallery */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 2000;
+  padding: 1rem;
+}
+.lightbox-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.lightbox-inner {
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.lightbox-inner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #111;
+}
