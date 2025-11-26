@@ -1622,12 +1622,12 @@
   grid-template-columns: 1.15fr 1fr;
   gap: 1rem;
   padding: 1.5rem 1.5rem 0;
+  align-items: stretch;
 }
 .retreat-video { width: 100%; }
 .video-embed {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.06);
@@ -1648,6 +1648,8 @@
     "d e c";
   grid-template-columns: 1.1fr 1fr 1fr;
   gap: .65rem;
+  height: 100%;
+  grid-template-rows: repeat(3, 1fr);
 }
 .media-thumb {
   border-radius: 10px;
@@ -1666,12 +1668,6 @@
 .area-c { grid-area: c; min-height: 150px; }
 .area-d { grid-area: d; min-height: 120px; }
 .area-e { grid-area: e; min-height: 120px; }
-/* Stabilize card layout across portrait/landscape mixes */
-.area-a { aspect-ratio: 4 / 5; }
-.area-b { aspect-ratio: 4 / 3; }
-.area-c { aspect-ratio: 3 / 4; }
-.area-d { aspect-ratio: 4 / 3; }
-.area-e { aspect-ratio: 4 / 3; }
 
 .retreat-body {
   padding: 1.25rem 1.5rem 1.75rem;
@@ -1765,6 +1761,11 @@
       "b c"
       "d e";
     grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    grid-template-rows: unset;
+  }
+  .video-embed {
+    padding-top: 56.25%; /* fallback to intrinsic ratio on stacked layout */
   }
 }
 
