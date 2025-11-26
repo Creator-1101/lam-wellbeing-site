@@ -1622,12 +1622,13 @@
   grid-template-columns: 1.15fr 1fr;
   gap: 1rem;
   padding: 1.5rem 1.5rem 0;
-  align-items: stretch;
+  align-items: start;
 }
 .retreat-video { width: 100%; }
 .video-embed {
   position: relative;
   width: 100%;
+  padding-top: 56.25%; /* 16:9 */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.06);
@@ -1648,8 +1649,7 @@
     "d e c";
   grid-template-columns: 1.1fr 1fr 1fr;
   gap: .65rem;
-  height: 100%;
-  grid-template-rows: repeat(3, 1fr);
+  grid-auto-rows: 150px;
 }
 .media-thumb {
   border-radius: 10px;
@@ -1663,11 +1663,11 @@
   object-fit: cover;
   cursor: zoom-in;
 }
-.area-a { grid-area: a; min-height: 220px; }
-.area-b { grid-area: b; min-height: 120px; }
+.area-a { grid-area: a; min-height: 200px; }
+.area-b { grid-area: b; min-height: 150px; }
 .area-c { grid-area: c; min-height: 150px; }
-.area-d { grid-area: d; min-height: 120px; }
-.area-e { grid-area: e; min-height: 120px; }
+.area-d { grid-area: d; min-height: 150px; }
+.area-e { grid-area: e; min-height: 150px; }
 
 .retreat-body {
   padding: 1.25rem 1.5rem 1.75rem;
