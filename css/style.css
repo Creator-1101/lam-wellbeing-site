@@ -1659,12 +1659,19 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: zoom-in;
 }
 .area-a { grid-area: a; min-height: 220px; }
 .area-b { grid-area: b; min-height: 120px; }
 .area-c { grid-area: c; min-height: 150px; }
 .area-d { grid-area: d; min-height: 120px; }
 .area-e { grid-area: e; min-height: 120px; }
+/* Stabilize card layout across portrait/landscape mixes */
+.area-a { aspect-ratio: 4 / 5; }
+.area-b { aspect-ratio: 4 / 3; }
+.area-c { aspect-ratio: 3 / 4; }
+.area-d { aspect-ratio: 4 / 3; }
+.area-e { aspect-ratio: 4 / 3; }
 
 .retreat-body {
   padding: 1.25rem 1.5rem 1.75rem;
@@ -1806,11 +1813,14 @@
   box-shadow: 0 14px 40px rgba(0,0,0,0.3);
   border-radius: 12px;
   overflow: hidden;
+  background: #111;
 }
 .lightbox-inner img {
   display: block;
-  width: 100%;
-  height: 100%;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  background: #111;
+  cursor: zoom-out;
 }
